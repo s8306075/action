@@ -4,10 +4,7 @@
 
 ## Docker 開發環境
 
-1. 
-    ```
-    git clone https://github.com/s8306075/action.git
-    ```
+1. Clone 專案
 2. 
     ```
     cd action
@@ -26,11 +23,11 @@
     ```
 6. 
     ```
-    php artisan key:generate
+    composer install
     ```
 7. 
     ```
-    composer install
+    php artisan key:generate
     ```
 8. 改 .env 檔 `DB_HOST=mysql`
 9. 
