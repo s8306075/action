@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "8001:80"
+
+  mysql:
+    image: mariadb:latest
+    volumes:
+      - ./db/mysql/:/var/lib/mysql
+    restart: always
+    ports:
+      - "33061:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: action
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 123
